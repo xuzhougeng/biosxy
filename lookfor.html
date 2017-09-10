@@ -1,0 +1,94 @@
+<div class="col-sm-12">
+			<ul class="nav nav-pills">
+			  <li class="active"><a href="#single" data-toggle="tab">Single Gene Analysis</a></li>
+			  <li><a href="#cancertype" data-toggle="tab">Cancer Type Analysis</a></li>
+			  <li><a href="#multiple" data-toggle="tab">Multiple Gene Analysis</a></li>
+			</ul>
+			<div id="myTabContent" class="tab-content">
+			  <div class="tab-pane fade active in panel panel-default" id="single">
+					<div class="panel-body">
+						<div class="col-sm-12">
+			        <form action="detail.php" method="get" class="form-horizontal">
+		            <div class="form-group row">
+									<div class="col-sm-12">
+	                	<h4>Enter gene name:</h4>
+									</div>
+									<div class="col-sm-12">
+										<div class="col-sm-9">
+	                  	<span class="help-block">The indicators in search box are "symbol" or "alias (newest symbol)".</span>
+										</div>
+		                <div class="col-sm-10" id="search">
+		                  <input class="form-control" type="text" id="search-text" name="gene" placeholder="e.g. ERBB2/ENSG00000141736/2064" autofocus="" autocomplete="off"><div class="autocomplete" style="display: none; width: 493.328px; position: relative; left: 15px; top: 0px;"></div>
+		                </div>
+		                <div class="col-sm-2">
+		                  <button type="submit" class="btn btn-primary" id="gopic">GoPIA!</button>
+		                </div>
+		            	</div>
+		            </div>
+			        </form>
+							<div class="col-sm-12">
+								<a id="a_expdiy" class="btn btn-primary btn-xs">Profile</a>
+								<a id="a_boxplot" class="btn btn-primary btn-xs">Boxplots</a>
+								<a id="a_stageplot" class="btn btn-primary btn-xs">Stage Plots</a>
+								<a id="a_survival" class="btn btn-primary btn-xs">Survival Analysis</a>
+								<a id="a_similar" class="btn btn-primary btn-xs">Similar</a>
+							</div>
+				  	</div>
+					</div>
+			  </div>
+			  <div class="tab-pane fade panel panel-default" id="cancertype">
+					<div class="panel-body">
+					  <div class="col-sm-12">
+							<h4>Given a cancer type, GEPIA provides these analyses:</h4>
+						  <div class="col-sm-12">
+						  	<div class="col-sm-12">
+								  <a href="detail.php?clicktag=degenes" class="list-group-item">
+								    <h4 class="list-group-item-heading">Differential genes analysis</h4>
+										<p class="list-group-item-text">GEPIA allows users to apply custom statistical methods and thresholds on a given dataset to dynamically obtain differentially expressed genes and their chromosomal distribution.</p>
+								  </a>
+						  	</div>
+						  </div>
+						  <div class="col-sm-12">
+						  	<div class="col-sm-12">
+								  <a href="detail.php?clicktag=survival2" class="list-group-item">
+								    <h4 class="list-group-item-heading">Most Significant Survival Genes</h4>
+										<p class="list-group-item-text">Given a cancer type, the genes most associated with patient survival can be searched.</p>
+								  </a>
+						  	</div>
+						  </div>
+					  </div>
+					</div>
+			  </div>
+			  <div class="tab-pane fade panel panel-default" id="multiple">
+					<div class="panel-body">
+					  <div class="col-sm-12">
+							<h4>Based on multiple genes, GEPIA provides these analyses:</h4>
+						  <div class="col-sm-12">
+						  	<div class="col-sm-12">
+								  <a href="detail.php?clicktag=matrix" class="list-group-item">
+								    <h4 class="list-group-item-heading">Multiple Gene Comparison</h4>
+										<p class="list-group-item-text">This feature provides expression matrix plots based on a given gene list. </p>
+								  </a>
+						  	</div>
+						  </div>
+						  <div class="col-sm-12">
+						  	<div class="col-sm-12">
+								  <a href="detail.php?clicktag=correlation" class="list-group-item">
+								    <h4 class="list-group-item-heading">Correlation Analysis</h4>
+										<p class="list-group-item-text">This function provides pair-wise gene expression correlation analysis for given sets of TCGA and/or GTEx expression data.</p>
+								  </a>
+						  	</div>
+						  </div>
+						  <div class="col-sm-12">
+						  	<div class="col-sm-12">
+								  <a href="detail.php?clicktag=dimension" class="list-group-item">
+								    <h4 class="list-group-item-heading">Dimensionality Reduction</h4>
+										<p class="list-group-item-text">Given a gene list, GEPIA performs Principal Component Analysis (PCA) using custom TCGA and/or GTEx expression data.</p>
+								  </a>
+						  	</div>
+						  </div>
+					  </div>
+					</div>
+			  </div>
+			</div>
+		</div>
