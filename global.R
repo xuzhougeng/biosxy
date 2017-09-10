@@ -6,10 +6,10 @@ library(DT)
 library(dplyr)
 library(stringr)
 
-
+## get the auhtor lists
 con <- DBI::dbConnect(RSQLite::SQLite(), 'sxy.sqlite')
 authors <- dbGetQuery(con, 'select author from articles')[,1]
-author_list <- unique(authors)
+author_list <- c("",unique(authors))
 dbDisconnect(con)
 
 host <-  Sys.getenv('HOST')

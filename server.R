@@ -71,8 +71,11 @@ server <- function(input, output) {
     if (! formData()[4] == ''){
       df <- df[str_detect(df$content,regex(formData()[4], ignore_case = TRUE) ),]
     }
-    df <- df %>%  filter(time > as.Date(formData()[2]) & time < as.Date(formData()[3])) %>% 
-      filter(author == formData()[1])
+    if (! formData()[1] ==''){
+      df <- filter(df, author == formData()[1])
+    }
+    
+    df <-  filter(df, time > as.Date(formData()[2]) & time < as.Date(formData()[3]))
     df <- df[,2:5]
     df
   })
